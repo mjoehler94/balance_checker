@@ -21,6 +21,8 @@ def main():
 
     # initializing chrome options
     chrome_options = Options()
+    chrome_options.add_argument("--headless")
+
     # https://chromedriver.chromium.org/downloads
     driver_path = "driver/chromedriver.exe"
     driver = webdriver.Chrome(driver_path, options=chrome_options)
