@@ -8,7 +8,7 @@ the UTA website, and then send me updates via slack.
 ## Sample Output
 ![example](img/message_example.jpg) 
 
-## High Level Instructions
+## Basic Instructions
 - set up a virtual environment and install required packages with `pip install -r requirements.txt`
     - (on windows you can run the included `deploy.bat` file to do this for you)
 - make sure that your credentials are stored in `secrets.py` 
