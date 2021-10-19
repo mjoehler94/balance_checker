@@ -56,6 +56,7 @@ def main():
         numeric_balance = float(current_balance.split("$")[1])
         if numeric_balance <= alert_level:
             message = f":warning: UTA Card Balance: {current_balance}"
+            # TODO: add link to refill balance to message
         elif numeric_balance >= remind_to_reimburse_amount:
             message = f":white_check_mark: UTA Card Balance: {current_balance}"
             message += (
