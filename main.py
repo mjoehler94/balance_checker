@@ -29,12 +29,10 @@ def main():
     driver_path = "driver/chromedriver.exe"
     driver = webdriver.Chrome(driver_path, options=chrome_options)
     url = "https://farepay.rideuta.com/"
-    driver.get(url)
 
     try:
-        # WebDriverWait(driver, 5).until(
-        #     EC.presence_of_element_located((By.ID, "username"))
-        # )
+        driver.get(url)
+        time.sleep(1)
 
         username = driver.find_element_by_id("username")
         password = driver.find_element_by_name("j_password")
@@ -43,7 +41,7 @@ def main():
         password.send_keys(my_secrets["password"])
         password.send_keys(Keys.RETURN)
 
-        time.sleep(1)
+        time.sleep(3)
         balance = driver.find_element(By.XPATH, "//table/tbody/tr[2]/td[3]")
         current_balance = str(balance.text)
     except:
