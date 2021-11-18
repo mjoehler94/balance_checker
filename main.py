@@ -11,11 +11,10 @@ from selenium.webdriver.common.keys import Keys
 
 # local modules
 from slack_utils import SlackEngine
-from secrets import my_secrets, slack_token
+from secrets import my_secrets, slack_token, reimburse_url
 
 alert_level = 10
 remind_to_reimburse_amount = 50
-reimburse_url = "https://progleasing.service-now.com/prognation?id=sc_cat_item&sys_id=448ba5bb1361fe00d9ff30ded144b041"
 
 
 def main():
@@ -54,7 +53,7 @@ def main():
         numeric_balance = float(current_balance.split("$")[1])
         if numeric_balance <= alert_level:
             message = f":warning: UTA Card Balance: {current_balance}"
-            # TODO: add link to refill balance to message
+            message += f"\nYou are almost out of funds. Don't forget to <{url}|refill your card>"
         elif numeric_balance >= remind_to_reimburse_amount:
             message = f":white_check_mark: UTA Card Balance: {current_balance}"
             message += (
