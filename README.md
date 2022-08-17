@@ -19,4 +19,4 @@ the UTA website, and then send me updates via slack.
     - other versions can be found [here](https://chromedriver.chromium.org/downloads)
 - to run the code:
     - activate the virtual environment and run python `main.py`
-    - if using windows, this can be done by executing the `run.bat` script (which can also be addd to task schedulers quite nicely)
+    - if using windows, this can be done by executing the `run.bat` script (which can also be added to task schedulers quite nicely)
